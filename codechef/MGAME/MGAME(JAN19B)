@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+uing namespace std;
+
+int main()
+{
+	long t;
+	cin>>t;
+	while(t--)
+	{
+		long n, p;
+		cin>>n>>p;
+		long max=0;
+		long score;
+		for(int i=1; i<=p; i++)
+		{
+			for(int j=1; i<=p; j++)
+			{
+				for(int k=1; k<=p; k++)
+				{
+					score=(((n%i)%j)%k)%n;
+					if(score>max)
+					{
+						max=score;
+						cout<<max<<'    '<<i<<' '<<j<<' '<<k<<'\n';
+					}	
+
+				}
+			}
+		}
+	}
+}

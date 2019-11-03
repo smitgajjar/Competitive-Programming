@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1551477557 source:/media/smit/3224D0B324D07AF5/Competitive Programming/codechef/CHDIGER/main.cpp
+	<iostream>
+	<vector>
+	<climits>
+

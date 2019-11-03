@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1551481059 source:/media/smit/3224D0B324D07AF5/Competitive Programming/codechef/JAIN/main.cpp
+	<iostream>
+	<unordered_set>
+	<vector>
+	<algorithm>
+
