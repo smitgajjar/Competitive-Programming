@@ -4,16 +4,18 @@ using namespace std;
 int main()
 {
 	int t=1;
-	// cin>>t;
+	freopen("in.txt", "r", stdin);
+	freopen("out.txt", "w+", stdout);
+	cin>>t;
 	while(t--)
 	{
 		string s;
 		stack<int>st;
 		cin>>s;
 		map<char, int>m;
-		m['H']=1;
-		m['C']=12;
-		m['O']=16;
+		m['x']=2;
+		m['y']=4;
+		m['z']=10;
 		for(char c: s)
 		{
 			if(c=='(')
