@@ -12,7 +12,7 @@ class StringToIntegerAtoi {
         if (i==n)
             return 0;
         boolean neg=false;
-        int num=0, maxx=Integer.MAX_VALUE;
+        long num=0, maxx=Integer.MAX_VALUE;
         if(arr[i]=='-') {
             neg=true;
             i++;
@@ -21,17 +21,18 @@ class StringToIntegerAtoi {
         else if(!Character.isDigit(arr[i])) return 0;
         while(i<n && Character.isDigit(arr[i])) {
             int c=arr[i]-'0';
-            if(num>maxx/10 || (num==maxx && c>maxx%10)) {
-                if(neg) return Integer.MIN_VALUE;
-                else return Integer.MAX_VALUE;
-            }
-            else {
-                num = num*10+c;
+            num = num*10+c;
+            if(num>maxx)
+            {
+                if(neg)
+                    return Integer.MIN_VALUE;
+                else
+                    return Integer.MAX_VALUE;
             }
             i++;
         }
-        if(neg) return -num;
-        else return num;
+        if(neg) return -(int)num;
+        else return (int)num;
     }
 
     public static void main(String[] args) {
