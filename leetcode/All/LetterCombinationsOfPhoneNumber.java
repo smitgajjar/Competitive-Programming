@@ -7,7 +7,7 @@ public class LetterCombinationsOfPhoneNumber {
     // Implement your solution by completing the below function
 
     List<String> ls = new ArrayList<>();
-    String[] arr = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "wxyz"};
+    String[] arr = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
     public String func(String digits, int n) {
         String s="";

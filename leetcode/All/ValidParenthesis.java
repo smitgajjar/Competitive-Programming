@@ -7,18 +7,22 @@ public class ValidParenthesis {
         Stack<Character> st = new Stack<>();
         for(char c: s.toCharArray()) {
             if(c=='(' || c=='{' || c=='[') st.push(c);
-            else if(c==')') {
-                if(st.peek()=='(') st.pop();
-                else return false;
+            else if(!st.empty()) {
+                else if(c==')') {
+                    if(st.peek()=='(') st.pop();
+                    else return false;
+                }
+                else if(c=='}') {
+                    if(st.peek()=='{') st.pop();
+                    else return false;
+                }
+                else if(c==']') {
+                    if(st.peek()=='[') st.pop();
+                    else return false;
+                }
             }
-            else if(c=='}') {
-                if(st.peek()=='{') st.pop();
-                else return false;
-            }
-            else if(c==']') {
-                if(st.peek()=='[') st.pop();
-                else return false;
-            }
+            else
+                return false;
         }
         if(st.empty()) return true;
 		return false;
